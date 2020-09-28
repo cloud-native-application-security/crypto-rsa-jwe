@@ -1,4 +1,4 @@
-# crypto-aes
+# crypto-rsa
 
 Demo project showing how to use AES in GCM mode with 256-bit key to guarantee integrity,
 authenticity, and confidentiality between two applications. 
