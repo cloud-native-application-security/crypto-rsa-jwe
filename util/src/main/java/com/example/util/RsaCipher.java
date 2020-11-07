@@ -56,13 +56,4 @@ public class RsaCipher {
   public String keyPairJson() {
     return this.keyPair.toJSONString();
   }
-
-  public String getPeerPublicKey(String jwe) {
-    try {
-      JWEObject jweObject = JWEObject.parse(jwe);
-      return jweObject.getHeader().getEphemeralPublicKey().toJSONString();
-    } catch (ParseException e) {
-      throw new RuntimeException(e);
-    }
-  }
 }
