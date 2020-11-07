@@ -25,7 +25,6 @@ public class PaymentsController {
     var refundsJson = rsaCipher.decrypt(refundsJwe);
 
     System.out.println("Refunds JWE : " + refundsJwe);
-    System.out.println("Warehouse public key: " + rsaCipher.getPeerPublicKey(refundsJwe));
     System.out.println("Payments key pair: " + rsaCipher.keyPairJson());
     System.out.println("Decrypted Refunds ...");
     System.out.println(refundsJson);
