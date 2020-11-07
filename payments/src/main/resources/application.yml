@@ -1,14 +1,8 @@
-refunds:
-  key: "2b6aa7fc27fdcdbb8e9c32f439efa35a"
+server:
+  port: 8081
 
-warehouse:
-  rsaPublicKey: |
-    -----BEGIN PUBLIC KEY-----
-    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmrMfu0YKoNRTb6mcy9Zl
-    rezzH0lvmg5yha1O5rBCaddVJ0gOgipXVxL760TVHzr+wh6xZOpE6GF4NtvGftk+
-    VP0du+sakNzSfsRkKnvmC3XaFCMvdn21YgmOXojk9afPiuDfdEwmVKfBHHO1m1z8
-    6M/Kuv1VlUkZ3nFVvy84Ue9XibyiwFBnqkVuqbVGKF0Nltf48dEuosHIY6kjSOKD
-    kw2i0jj3vEQAzpoPyUo9qElgdr7h3H/ROu4SXCoEitLp8APjgoAx6rLFXL9z9kef
-    LfcvwpBhqHoAlJYAxnojwwAVC2lgGLnul7v0tD78LCEEuM6MxMPjmjw60L0KdWAX
-    uQIDAQAB
-    -----END PUBLIC KEY-----
+logging:
+  level:
+    org:
+      apache:
+        http: "DEBUG"

@@ -14,10 +14,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>crypto-rsa</name>
   <packaging>pom</packaging>
-  <description>Demo application showing to use the RSA encryption </description>
+  <description>Example showing how Diffie-Hellman Key Exchange Works in Java using JWK to represent the keys</description>
 
   <properties>
     <java.version>11</java.version>
+    <spring-security.version>5.4.1</spring-security.version>
   </properties>
 
   <modules>
@@ -35,6 +36,11 @@
         <exclusion>
           <groupId>org.junit.vintage</groupId>
           <artifactId>junit-vintage-engine</artifactId>
+        </exclusion>
+        <!-- conflict with google Tink pulling in org.json:json:20180813 -->
+        <exclusion>
+          <groupId>com.vaadin.external.google</groupId>
+          <artifactId>android-json</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
