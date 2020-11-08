@@ -1,7 +1,7 @@
 package com.example.warehouse;
 
 import com.example.util.JsonUtils;
-import com.example.util.RsaCipher;
+import com.example.util.RsaDecryptor;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,11 +19,11 @@ class WarehouseApplicationTests {
   @Test
   void testReportGeneration() {
 
-    var rsaCipher = new RsaCipher();
+    var rsaDecryptor = new RsaDecryptor();
 
     var url = "http://localhost:" + port + "/refunds";
-    var responseJwe = restTemplate.postForObject(url, rsaCipher.getPublicKey(), String.class);
-    var refundsJson = rsaCipher.decrypt(responseJwe);
+    var refundsJwe = restTemplate.postForObject(url, rsaDecryptor.getPublicKey(), String.class);
+    var refundsJson = rsaDecryptor.decrypt(refundsJwe);
 
     Refund[] refunds = JsonUtils.fromJson(refundsJson, Refund[].class);
     Assertions.assertThat(refunds).hasSize(2);
