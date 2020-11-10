@@ -11,11 +11,11 @@ import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.RSAKey;
 import java.text.ParseException;
 
-public class RsaEncryptor {
+public class RsaEncrypter {
 
   private final RSAKey key;
 
-  public RsaEncryptor(String publicKeyJwk) {
+  public RsaEncrypter(String publicKeyJwk) {
     try {
       this.key = JWK.parse(publicKeyJwk).toRSAKey();
     } catch (ParseException e) {

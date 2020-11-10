@@ -1,6 +1,6 @@
 package com.example.warehouse;
 
-import com.example.util.RsaEncryptor;
+import com.example.util.RsaEncrypter;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +17,7 @@ class RefundController {
 
   @PostMapping("/refunds")
   String generateReport(@RequestBody String peerJwk) {
-    var rsaEncryptor = new RsaEncryptor(peerJwk);
+    var rsaEncryptor = new RsaEncrypter(peerJwk);
     return rsaEncryptor.encrypt(refundService.generateReport());
   }
 }

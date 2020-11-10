@@ -7,11 +7,11 @@ import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.gen.RSAKeyGenerator;
 import java.text.ParseException;
 
-public class RsaDecryptor {
+public class RsaDecrypter {
 
   private final RSAKey key;
 
-  public RsaDecryptor() {
+  public RsaDecrypter() {
     try {
       this.key = new RSAKeyGenerator(4096).generate();
     } catch (JOSEException e) {

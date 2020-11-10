@@ -1,7 +1,7 @@
 package com.example.warehouse;
 
 import com.example.util.JsonUtils;
-import com.example.util.RsaDecryptor;
+import com.example.util.RsaDecrypter;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +19,7 @@ class WarehouseApplicationTests {
   @Test
   void testReportGeneration() {
 
-    var rsaDecryptor = new RsaDecryptor();
+    var rsaDecryptor = new RsaDecrypter();
 
     var url = "http://localhost:" + port + "/refunds";
     var refundsJwe = restTemplate.postForObject(url, rsaDecryptor.getPublicKey(), String.class);

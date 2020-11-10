@@ -1,6 +1,6 @@
 package com.example.payments;
 
-import com.example.util.RsaDecryptor;
+import com.example.util.RsaDecrypter;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +17,7 @@ public class PaymentsController {
 
   @GetMapping("/")
   public String processRefunds() {
-    var rsaDecryptor = new RsaDecryptor();
+    var rsaDecryptor = new RsaDecrypter();
 
     String refundsJwe =
         restTemplate.postForObject(
