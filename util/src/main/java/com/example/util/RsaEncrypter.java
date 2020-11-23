@@ -23,10 +23,6 @@ public class RsaEncrypter {
     }
   }
 
-  public String getPublicKey() {
-    return key.toPublicJWK().toJSONString();
-  }
-
   public String encrypt(String data) {
     try {
       JWEHeader header = new JWEHeader(JWEAlgorithm.RSA_OAEP_256, EncryptionMethod.A256GCM);
