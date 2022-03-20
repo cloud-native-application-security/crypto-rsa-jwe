@@ -31,7 +31,7 @@ samples to your specific situation.
 
 ## software prerequisites 
 
-* Java 11 JDK 
+* Java 17 JDK 
 * Java IDE 
 
 ## run on the command line
@@ -43,7 +43,7 @@ samples to your specific situation.
 * make an HTTP get request to `http://127.0.0.1:8081/` and you will get back JSON object.
 * inspect the console output on the warehouse application nod you will an output showing the 
   value of the AES encryption key derived using ECDH. 
-* inspect the console output of the payments application you will the AES key used for decryption 
+* inspect the console output of the payments' application you will the AES key used for decryption 
   Notice it has the same value as the warehouse application. You will see the output of the
   response from the warehouse application containing the public key of the warehouse application, 
   and the encrypted JWE. If you scroll up in the console output you will see the actual HTTP 

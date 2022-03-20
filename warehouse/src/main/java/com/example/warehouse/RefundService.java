@@ -11,8 +11,8 @@ public class RefundService {
   public String generateReport() {
     List<Refund> refunds =
         List.of(
-            new Refund("5555555555554444", BigDecimal.valueOf(500)),
-            new Refund("4012888888881881", BigDecimal.valueOf(250)));
+            new Refund("12345", BigDecimal.valueOf(500)),
+            new Refund("6789", BigDecimal.valueOf(250)));
     return JsonUtils.toJson(refunds);
   }
 }
